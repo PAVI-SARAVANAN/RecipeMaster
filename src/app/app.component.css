@@ -1,0 +1,35 @@
+.hero{
+   background-image: url('/assets/food-bg.jpg');
+   background-size: cover;
+} 
+.overlay{
+    border-image: linear-gradient(#00FF004D, #00FFFF4D) 1 fill;
+} 
+
+header{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0rem;
+    height: 12vh;
+    position: relative;
+}
+
+h3{
+    text-align: center;
+    margin: 0px;
+    font-size: 3.5rem;
+    position: absolute;
+    top: 1em;
+    left: 6.7em;
+    right: 6.7em;
+    font-family: 'Dancing Script', cursive;
+    color:#003300;
+}
+
+@media (max-width : 1040px){
+    h3{
+        font-size: 2.5rem;
+        left: 5em;
+        right: 5em;
+    }
+}
