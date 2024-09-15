@@ -1,0 +1,9 @@
+<header>
+        <button (click)="OnClick()"> Add New Recipe </button>
+</header>
+
+@if(AddRecipe){
+    <app-new-recipe (formSubmit)="OnFormSubmit()" (cancel)="OnCancel()"/>
+}
+
+<app-recipe-list></app-recipe-list>
