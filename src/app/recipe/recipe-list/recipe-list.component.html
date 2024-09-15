@@ -1,0 +1,14 @@
+<div class="cards-layout">
+    <div *ngFor="let item of recipeList" class="cards">
+        <img src="{{item.imageURL}}" height="340"/>
+        <p>{{item.name}} </p>
+        <div class="actions">
+            <app-button (click)="OnSelectingRecipe(item.id)">View</app-button>
+            <app-button (click)="OnDeleteRecipe(item.id)">Delete</app-button>
+        </div>
+    </div>
+</div>
+
+@if(ViewRecipe){
+    <app-view-recipe (Close)= "OnClosingRecipe()"/>
+}
