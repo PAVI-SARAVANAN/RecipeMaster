@@ -1,0 +1,44 @@
+<div class="back-drop"></div>
+<dialog open>
+    <h2>Add Recipe</h2>
+    <form #form="ngForm"  (ngSubmit) = "OnSubmit(recipeName.value, recipeMethod.value,category.value, duration.value, imageURL.value)">
+        <p>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" ngModel #recipeName="ngModel" required/>
+        </p> 
+            <p *ngIf = "recipeName.invalid && recipeName.touched" class="form-error">Please enter valid recipe name</p>
+        <p>
+            <label>Method</label>
+            <textarea id="Method" name="Method" rows="5" ngModel #recipeMethod="ngModel" required></textarea>
+        </p>
+           <p *ngIf = "recipeMethod.invalid && recipeMethod.touched" class="form-error">Please enter valid Method</p>
+        <p>
+            <label for="category">Category</label>
+            <select id="category" name="category" ngModel #category="ngModel">
+                <option>Breakfast</option>
+                <option>Lunch</option>
+                <option>Dinner</option>
+            </select>
+        </p>
+        <p>
+            <label>Duration (in minutes)</label>
+           <input type="text" id="duration" name="duration" ngModel #duration="ngModel" required/>    
+        </p>
+        
+            <p *ngIf="(duration.invalid && duration.touched)" class="form-error">Please enter valid duration</p>
+        <p>
+            <label>Image</label>
+            <input type=" text" id="recipeImg" name="recipeImg" placeholder="Paste the Url here" ngModel #imageURL="ngModel" required/>        
+        </p>
+       
+            <p *ngIf="imageURL.invalid && imageURL.touched" class="form-error">Please provide the valid URL</p>
+        <div class="actions">
+                <button type="submit"  [disabled]="form.form.invalid" >Add</button> 
+                <app-button type="button" (click)= "OnCancel()">Cancel</app-button>
+        </div>
+        
+    </form>
+    
+</dialog>
+
+

@@ -1,0 +1,90 @@
+.back-drop{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left: 0;
+    background-color: #fcfcfc;
+}
+dialog{
+    width: 50rem;
+    height: 34rem;
+    border:1px solid;
+    border-radius: 5px;
+    background-color: #3b943b;
+    top: 5rem;
+    font-family: 'Dancing Script', cursive;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0em 4em;
+}
+h2{
+    text-align: center;
+    font-size: 1.8em;
+    color: #001A00;
+    margin-block-start: 0.6em;
+    margin-block-end: 0.6em;
+}
+label{
+    font-weight: bold;
+    font-size: 1.5em;
+    width: 7rem;
+    color: #001A00;
+}
+p{
+    margin: 0px;
+    display: flex;
+    gap: inherit;
+}
+input, textarea{
+    width: 70%;
+    padding: 0.5rem 0.2rem;
+    margin: 0.2rem 0rem;
+    border-radius: 5px;
+    border: 1px solid;
+    font-family: inherit;
+    font-size: 1.3em;
+    font-weight: 800;
+    padding-inline: 10px;
+}
+select{
+    width: 73%;
+    padding: 0.5rem 0.2rem;
+    margin: 0.2rem 0rem;
+    border-radius: 5px;
+    border: 1px solid;
+    font-family: inherit;
+    font-size: 1.3em;
+    font-weight: 800;
+    padding-inline: 10px;
+}
+.actions{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+}
+.form-error{
+    font-size: 1.2em;
+    font-weight: 600;
+    font-family: inherit;
+    color: #FFB833;
+    padding-left: 7em;
+}
+
+button{
+    background-color: #FFB833;   
+    width: 6rem;
+    height: 2.5rem;
+    font-family: inherit;
+    font-size: 1.2em;
+    border: 2px solid #003300;
+    border-radius: 5px;
+    color: #003300;
+    font-weight: 900;
+} 
+button:disabled{
+    background-color: #FFDB99;
+}
