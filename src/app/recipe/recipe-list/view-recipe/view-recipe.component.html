@@ -1,0 +1,25 @@
+<div class="back-drop"></div>
+<dialog open>
+    <div class="recipe-details">
+        <h2> Recipe Details</h2>
+        <img [src]="SelectedRecipe[0].imageURL" />
+        <h3>{{SelectedRecipe[0].name}} </h3>
+        <table>
+            <tr>
+                <td> Category: </td>
+                <td> {{SelectedRecipe[0].category}} </td>
+            </tr>
+            <tr>
+                <td>Method: </td>
+                <td>{{SelectedRecipe[0].method}} </td>
+            </tr>
+            <tr>
+                <td> Duration: </td>
+                <td> {{SelectedRecipe[0].duration}} minutes</td>
+            </tr>
+        </table>         
+   
+   <app-button (click)= "OnCloseRecipe()">Close</app-button>   
+    </div>  
+</dialog>
+
