@@ -1,6 +1,6 @@
-#####RecipeMaster##### - A Recipe Management App for managing a collection of recipes.
+##### RecipeMaster ##### - A Recipe Management App for managing a collection of recipes.
 
-App Purpose: 
+<span style="color: #2eb82e"> App Purpose:  </span>
          It allows user to add, delete and view the basic information about recipes, such as preparation steps, recipe category, abd cooking time.
          
 Features:
@@ -10,6 +10,7 @@ Features:
 * **Delete Recipe** - The user can delete recipes from the list when they are no longer needed.
 
 Here's an overview of RecipeMaster:
+
 ![image](https://github.com/user-attachments/assets/449fcaa0-5aef-41ae-bb65-c5d77f665ecf)
 
 
