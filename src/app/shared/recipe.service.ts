@@ -21,6 +21,14 @@ export class recipeService{
      }
      this.recipeData.update((oldRecipe)=> [...oldRecipe, newRecipe]);
    }
+   editRecipe(id:string, editedRecipe:recipe){
+     const recipeDataCopy = this.recipeData();
+     const index = recipeDataCopy.findIndex((updatedRecipe) => (updatedRecipe.id === id))
+     if(index !== -1){
+       recipeDataCopy[index] = editedRecipe;
+     }
+     this.recipeData.set(recipeDataCopy);
+   }
    deleteRecipe(id:string){
       this.recipeData.update((recipesData) => recipesData.filter((recipedata) => (recipedata.id !== id)) );
    }

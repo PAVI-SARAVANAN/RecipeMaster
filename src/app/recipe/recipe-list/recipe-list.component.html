@@ -4,6 +4,7 @@
         <p>{{item.name}} </p>
         <div class="actions">
             <app-button (click)="OnSelectingRecipe(item.id)">View</app-button>
+            <app-button (click)="OnEditingRecipe(item.id)">Edit</app-button>
             <app-button (click)="OnDeleteRecipe(item.id)">Delete</app-button>
         </div>
     </div>
@@ -11,4 +12,7 @@
 
 @if(ViewRecipe){
     <app-view-recipe (Close)= "OnClosingRecipe()"/>
+}
+@if(EditRecipe){
+    <app-edit-recipe (formSubmit)="OnEditing()" (cancel)= "OnClosing()" />
 }

@@ -32,7 +32,12 @@ p{
     justify-content: space-evenly; 
     align-items: center;
 }
-
+@media(max-width: 1200px){
+    .cards-layout{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 @media (max-width : 940px){
     .cards-layout{
         display: grid;

@@ -1,0 +1,41 @@
+<div class="back-drop"></div>
+<dialog open>
+    <h2>Edit Recipe</h2>
+    <form #form="ngForm"  (ngSubmit) = "OnSave(recipeName.value, recipeMethod.value,category.value, duration.value)">
+        <img [src]="SelectedRecipe[0].imageURL">
+        <p>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" ngModel #recipeName="ngModel" [(ngModel)]="enteredRecipe" required/>
+        </p> 
+            <p *ngIf = "recipeName.invalid && recipeName.touched" class="form-error">Please enter valid recipe name</p>
+        <p>
+            <label>Method</label>
+            <textarea id="Method" name="Method" rows="5" ngModel #recipeMethod="ngModel" [(ngModel)]="enteredMethod" required></textarea>
+        </p>
+           <p *ngIf = "recipeMethod.invalid && recipeMethod.touched" class="form-error">Please enter valid Method</p>
+        <p>
+            <label for="category">Category</label>
+            <select id="category" name="category" ngModel #category="ngModel" [(ngModel)]="enteredCategory">
+                <option>Breakfast</option>
+                <option>Lunch</option>
+                <option>Dinner</option>
+            </select>
+        </p>
+        <p>
+            <label>Duration (in minutes)</label>
+           <input type="text" id="duration" name="duration" ngModel #duration="ngModel" [(ngModel)]="enteredDuration" required/>    
+        </p>
+        
+            <p *ngIf="(duration.invalid && duration.touched)" class="form-error">Please enter valid duration</p>
+       
+        <div class="actions">
+                <button type="submit"  [disabled]="form.form.invalid" >Save</button> 
+                <app-button type="button" (click)= "OnCancel()">Cancel</app-button>
+        </div>
+        
+    </form>
+    
+</dialog>
+
+
+
