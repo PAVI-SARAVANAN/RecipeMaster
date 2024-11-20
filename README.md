@@ -13,7 +13,8 @@
 
 Here's an overview of RecipeMaster:
 
-![image](https://github.com/user-attachments/assets/449fcaa0-5aef-41ae-bb65-c5d77f665ecf)
+![image](https://github.com/user-attachments/assets/c5128f01-c1c6-4d34-a6c8-76f7393d82b6)
+
 
 
     
